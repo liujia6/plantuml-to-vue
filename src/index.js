@@ -16,8 +16,7 @@ export default defineComponent({
             ${methodObject}
         }
     }
-});
-`
+});`
 }
 
 function getGroupValues(values, group) {
@@ -99,3 +98,8 @@ let json = [
 
 
 let vueComponentCode = generateVueComponent(json);
+console.log(vueComponentCode);
+
+module.exports = {
+    generateVueComponent,
+}

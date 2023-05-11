@@ -4,13 +4,11 @@
   "description": "plantuml转vue代码",
   "main": "index.js",
   "dependencies": {
-    "puml2code": "^0.7.0",
-    "pegjs": "^0.10.0",
-    "commander": "^10.0.0"
+    "commander": "^10.0.0",
+    "pegjs": "^0.10.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -25,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/liujia6/plantuml-to-vue/issues"
   },
-  "homepage": "https://github.com/liujia6/plantuml-to-vue#readme"
+  "homepage": "https://github.com/liujia6/plantuml-to-vue#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }
