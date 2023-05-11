@@ -1,0 +1,22 @@
+lockfileVersion: 5.4
+
+specifiers:
+  commander: ^10.0.0
+  pegjs: ^0.10.0
+
+dependencies:
+  commander: 10.0.0
+  pegjs: 0.10.0
+
+packages:
+
+  /commander/10.0.0:
+    resolution: {integrity: sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==}
+    engines: {node: '>=14'}
+    dev: false
+
+  /pegjs/0.10.0:
+    resolution: {integrity: sha512-qI5+oFNEGi3L5HAxDwN2LA4Gg7irF70Zs25edhjld9QemOgp0CbvMtbFcMvFtEo1OityPrcCzkQFB8JP/hxgow==}
+    engines: {node: '>=0.10'}
+    hasBin: true
+    dev: false
