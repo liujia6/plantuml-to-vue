@@ -1,43 +1,39 @@
-const { generateVueComponent } = require('../src/index.js');
+const { generateVueComponent } = require('../src/generator.js');
+let json = [
+    {
+        "type": "class",
+        "className": "operation",
+        "values": [
+            {
+                "group": "props"
+            },
+            {
+                "visibility": "+",
+                "name": "test",
+                "type": "String",
+                "description": "中文"
+            },
+            {
+                "group": "methods"
+            },
+            {
+                "visibility": "+",
+                "name": "getValues"
+            }
+        ]
+    }
+]
 describe('test generateVueComponent basic', function () {
     test('test generateVueComponent', function () {
-        let json = [
-            {
-                "type": "class",
-                "className": "operation",
-                "values": [
-                    {
-                        "group": "props"
-                    },
-                    {
-                        "visibility": "+",
-                        "type": "test",
-                        "name": "ddd"
-                    },
-                    {
-                        "group": "methods"
-                    },
-                    {
-                        "name": "getValues"
-                    },
-                    {
-                        "group": "slots"
-                    },
-                    {
-                        "visibility": "+",
-                        "type": "test",
-                        "name": "ddd"
-                    }
-                ]
-            }
-        ];
         let result = generateVueComponent(json);
-        expect(result).toBe(`import { defineComponent } from '@vue/composition-api';
+        expect(result).toBe(`<template></template>
+import { defineComponent } from '@vue/composition-api';
 export default defineComponent({
     name: 'operation',
     props: { 
-        ddd : {
-            type: test,
+        // 中文
+        test : {
+            type: String,
             default: undefined,
         }, 
     },
@@ -54,3 +50,5 @@ export default defineComponent({
 });`)
     })
 })
+
+
